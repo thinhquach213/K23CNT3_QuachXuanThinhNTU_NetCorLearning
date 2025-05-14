@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Qxtlesoon04.props" />
+</Project>

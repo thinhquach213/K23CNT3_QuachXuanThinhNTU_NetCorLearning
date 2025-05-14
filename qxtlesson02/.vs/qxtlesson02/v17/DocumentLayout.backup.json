@@ -58,21 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\qxtlesson02\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
-              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\qxtlesson02\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-07T03:37:59.791Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -157,11 +144,24 @@
               "Title": "_QxtLayout.cshtml",
               "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\qxtlesson02\\Views\\Shared\\_QxtLayout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_QxtLayout.cshtml",
-              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\qxtlesson02\\Views\\Shared\\_QxtLayout.cshtml*",
-              "RelativeToolTip": "Views\\Shared\\_QxtLayout.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABgAAAAAAAAAA==",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\qxtlesson02\\Views\\Shared\\_QxtLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_QxtLayout.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBwAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-07T02:48:20.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\qxtlesson02\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\qxtlesson02\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T03:37:59.791Z",
               "EditorCaption": ""
             },
             {
