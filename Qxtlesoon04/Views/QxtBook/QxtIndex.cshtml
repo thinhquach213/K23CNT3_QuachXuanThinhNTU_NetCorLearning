@@ -24,7 +24,8 @@
                 <td>@qxtIteem.QxtTitle</td>
                 <td>@qxtIteem.QxtDescription</td>
                 <td>
-                    <img src="~/images/@qxtIteem.QxtImage" alt="@qxtIteem.QxtTitle" style="width:100px; height:150px" />
+                    <img src="@Url.Content("~/images/" + qxtIteem.QxtImage)" alt="@qxtIteem.QxtTitle" style="width:100px; height:150px;" />
+
                 </td>
                 <td> @qxtIteem.QxtImage</td>
                 <td>@qxtIteem.QxtPrice</td>

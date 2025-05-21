@@ -1,0 +1,35 @@
+﻿@model IEnumerable<QxtLesson05Modles.Models.DataModels.QxtMember>
+
+@{
+    ViewData["Title"] = "QxtIndex";
+    int stt = 1;
+}
+
+<h1>Danh sách Member</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Member ID</th>
+            <th>UserName</th>
+            <th>Password</th>
+            <th>FullName</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var qxtItem in Model)
+        {
+            <tr>
+                <td>@stt</td>
+                <td>@qxtItem.QxtMemberID</td>
+                <td>@qxtItem.QxtUserName</td>
+                <td>@qxtItem.QxtPassword</td>
+                <td>@qxtItem.QxtFullName</td>
+                <td>@qxtItem.QxtEmail</td>
+            </tr>
+            stt++;
+        }
+    </tbody>
+</table>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\QxtLesson05Modles.props" />
+</Project>

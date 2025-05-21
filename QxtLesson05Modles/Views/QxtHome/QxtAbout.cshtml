@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Thông tin sinh viên ";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="alert alert-info">
+    <h1 @ViewData["Title"]></h1>
+    <hr />
+    <p>Member ID: @Model.QxtMemberID</p>
+    <p>Member UserName: @Model.QxtUserName</p>
+    <p>Member Password: @Model.QxtPassword</p>
+    <p>Member FullName: @Model.QxtFullName</p>
+    <p>Member Email: @Model.QxtEmail</p>
+</div>
