@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QxtLesson06", "QxtLesson06.csproj", "{53F05503-A864-455F-8244-26438740540B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53F05503-A864-455F-8244-26438740540B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F05503-A864-455F-8244-26438740540B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F05503-A864-455F-8244-26438740540B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F05503-A864-455F-8244-26438740540B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F86FE61E-3D2A-4097-9E1C-09F6CB70C887}
+	EndGlobalSection
+EndGlobal

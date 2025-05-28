@@ -1,0 +1,50 @@
+﻿@model List<QxtLesson06.Models.QxtEmployee>
+
+@{
+    ViewData["Title"] = "Danh sách nhân viên";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Họ tên</th>
+                <th>Ngày sinh</th>
+                <th>Email</th>
+                <th>Điện thoại</th>
+                <th>Lương</th>
+                <th class="d-flex justify-content-between align-items-center">
+                    <span>Trạng thái</span>
+                    <a class="btn btn-sm btn-primary" asp-action="QxtCreate">
+                        Thêm mới
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var QxtEmp in Model)
+            {
+                <tr>
+                    <td>@QxtEmp.QxtID</td>
+                    <td>@QxtEmp.QxtName</td>
+                    <td>@QxtEmp.QxtBirthDay.ToString("dd/MM/yyyy")</td>
+                    <td>@QxtEmp.QxtEmail</td>
+                    <td>@QxtEmp.QxtPhone</td>
+                    <td>@QxtEmp.QxtSalary.ToString("N0") đ</td>
+                    <td>
+                        @if (QxtEmp.QxtStatus)
+                        {
+                            <span class="badge bg-success">Hoạt động</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">Ngừng</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
