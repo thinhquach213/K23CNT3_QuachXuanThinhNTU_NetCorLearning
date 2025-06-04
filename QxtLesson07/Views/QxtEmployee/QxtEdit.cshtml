@@ -1,0 +1,61 @@
+﻿@model QxtLesson07.Models.QxtEmployee
+
+@{
+    ViewData["Title"] = "Sua Thong Tin Sinh Vien ";
+}
+
+<h1>Sua Thong Tin Sinh Vien</h1>
+
+<h4>QxtEmployee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="QxtEdit" asp-route-id="@Model.QxtID">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="QxtID" class="control-label"></label>
+                <input asp-for="QxtID" class="form-control" />
+                <span asp-validation-for="QxtID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QxtName" class="control-label"></label>
+                <input asp-for="QxtName" class="form-control" />
+                <span asp-validation-for="QxtName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QxtBirthDay" class="control-label"></label>
+                <input asp-for="QxtBirthDay" class="form-control" />
+                <span asp-validation-for="QxtBirthDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QxtEmail" class="control-label"></label>
+                <input asp-for="QxtEmail" class="form-control" />
+                <span asp-validation-for="QxtEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QxtPhone" class="control-label"></label>
+                <input asp-for="QxtPhone" class="form-control" />
+                <span asp-validation-for="QxtPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QxtSalary" class="control-label"></label>
+                <input asp-for="QxtSalary" class="form-control" />
+                <span asp-validation-for="QxtSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="QxtStatus" /> @Html.DisplayNameFor(model => model.QxtStatus)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="QxtIndex">Back to List</a>
+</div>
+
