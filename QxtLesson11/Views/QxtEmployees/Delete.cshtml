@@ -1,0 +1,48 @@
+﻿@model QxtLesson11.Models.QxtEmployee
+
+@{
+    ViewData["Title"] = "Xóa nhân viên";
+}
+
+<h1>Xóa nhân viên</h1>
+
+<h3>Bạn chắc chắn muốn xóa nhân viên này?</h3>
+<div>
+    <h4>QxtEmployee</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtEmpName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtEmpName)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtEmpLevel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtEmpLevel)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtEmpStartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtEmpStartDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtEmpStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtEmpStatus)
+        </dd>
+    </dl>
+
+    <form asp-action="QxtDelete">
+        <input type="hidden" asp-for="QxtEmpId" />
+        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+        <a asp-action="QxtIndex" class="btn btn-secondary">Quay lại danh sách</a>
+    </form>
+</div>

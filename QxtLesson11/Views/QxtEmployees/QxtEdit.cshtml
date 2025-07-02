@@ -1,0 +1,56 @@
+﻿@model QxtLesson11.Models.QxtEmployee
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<h4>QxtEmployees</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="QxtEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="QxtEmpId" />
+
+            <div class="form-group mb-2">
+                <label asp-for="QxtEmpName" class="control-label"></label>
+                <input asp-for="QxtEmpName" class="form-control" />
+                <span asp-validation-for="QxtEmpName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="QxtEmpLevel" class="control-label"></label>
+                <input asp-for="QxtEmpLevel" class="form-control" />
+                <span asp-validation-for="QxtEmpLevel" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="QxtEmpStartDate" class="control-label"></label>
+                <input asp-for="QxtEmpStartDate" class="form-control" type="date" />
+                <span asp-validation-for="QxtEmpStartDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="QxtEmpStatus" class="control-label"></label>
+                <select asp-for="QxtEmpStatus" class="form-control">
+                    <option value="">-- Chọn trạng thái --</option>
+                    <option value="true" selected="@(Model?.QxtEmpStatus == true)">Hiển thị</option>
+                    <option value="false" selected="@(Model?.QxtEmpStatus == false)">Ẩn</option>
+                </select>
+                <span asp-validation-for="QxtEmpStatus" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Ghi lại" class="btn btn-primary" />
+                <a asp-action="QxtIndex" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

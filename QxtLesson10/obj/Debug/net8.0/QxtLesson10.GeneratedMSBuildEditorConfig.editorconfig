@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QxtLesson10
 build_property.RootNamespace = QxtLesson10
@@ -18,16 +26,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\K23CNT3_QuachXuanThinhNTU_NetCorLearning\QxtLesson10
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/K23CNT3_QuachXuanThinhNTU_NetCorLearning/QxtLesson10/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[E:/K23CNT3_QuachXuanThinhNTU_NetCorLearning/QxtLesson10/Views/QxtHome/QxtAbout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXh0SG9tZVxReHRBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/K23CNT3_QuachXuanThinhNTU_NetCorLearning/QxtLesson10/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[E:/K23CNT3_QuachXuanThinhNTU_NetCorLearning/QxtLesson10/Views/QxtHome/QxtIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXh0SG9tZVxReHRJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/K23CNT3_QuachXuanThinhNTU_NetCorLearning/QxtLesson10/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/K23CNT3_QuachXuanThinhNTU_NetCorLearning/QxtLesson10/Views/Shared/_QxtNavbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9ReHROYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/K23CNT3_QuachXuanThinhNTU_NetCorLearning/QxtLesson10/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -42,6 +54,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/K23CNT3_QuachXuanThinhNTU_NetCorLearning/QxtLesson10/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-975i72mtsd
+[E:/K23CNT3_QuachXuanThinhNTU_NetCorLearning/QxtLesson10/Views/Shared/_QxtLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9ReHRMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wwxbj6rdg4

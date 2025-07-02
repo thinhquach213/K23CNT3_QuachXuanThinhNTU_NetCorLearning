@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QxtLesson08")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2831475eb5ce7755b87aeb8aae3af21a75da46b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a50538f5c95635fefb6dc4317c1e4751865a96ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("QxtLesson08")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QxtLesson08")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
