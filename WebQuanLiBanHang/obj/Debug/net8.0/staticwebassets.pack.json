@@ -1,0 +1,629 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebQuanLiBanHang.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebQuanLiBanHang.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\LayoutOgani\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\css\\elegant-icons.css",
+      "PackagePath": "staticwebassets\\LayoutOgani\\css\\elegant-icons.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\LayoutOgani\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\LayoutOgani\\css\\jquery-ui.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\LayoutOgani\\css\\nice-select.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\LayoutOgani\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\css\\slicknav.min.css",
+      "PackagePath": "staticwebassets\\LayoutOgani\\css\\slicknav.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\css\\style.css",
+      "PackagePath": "staticwebassets\\LayoutOgani\\css\\style.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\ElegantIcons.eot",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\ElegantIcons.eot"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\ElegantIcons.svg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\ElegantIcons.svg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\ElegantIcons.ttf",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\ElegantIcons.ttf"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\ElegantIcons.woff",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\ElegantIcons.woff"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\LayoutOgani\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\banner\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\banner\\banner-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\banner\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\banner\\banner-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\blog-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\blog-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\blog-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\blog-4.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\blog-5.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\blog-6.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\details\\details-author.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\details\\details-author.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\details\\details-hero.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\details\\details-hero.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\details\\details-pic.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\details\\details-pic.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\sidebar\\sr-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\sidebar\\sr-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\sidebar\\sr-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\sidebar\\sr-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\blog\\sidebar\\sr-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\blog\\sidebar\\sr-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\breadcrumb.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\breadcrumb.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\cart\\cart-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\cart\\cart-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\cart\\cart-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\cart\\cart-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\cart\\cart-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\cart\\cart-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\categories\\cat-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\categories\\cat-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\categories\\cat-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\categories\\cat-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\categories\\cat-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\categories\\cat-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\categories\\cat-4.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\categories\\cat-4.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\categories\\cat-5.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\categories\\cat-5.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\featured\\feature-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\featured\\feature-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\featured\\feature-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\featured\\feature-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\featured\\feature-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\featured\\feature-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\featured\\feature-4.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\featured\\feature-4.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\featured\\feature-5.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\featured\\feature-5.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\featured\\feature-6.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\featured\\feature-6.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\featured\\feature-7.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\featured\\feature-7.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\featured\\feature-8.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\featured\\feature-8.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\hero\\banner.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\hero\\banner.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\language.png",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\language.png"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\latest-product\\lp-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\latest-product\\lp-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\latest-product\\lp-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\latest-product\\lp-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\latest-product\\lp-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\latest-product\\lp-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\logo.png",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\logo.png"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\payment-item.png",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\payment-item.png"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\details\\product-details-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\details\\product-details-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\details\\product-details-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\details\\product-details-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\details\\product-details-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\details\\product-details-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\details\\product-details-4.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\details\\product-details-4.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\details\\product-details-5.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\details\\product-details-5.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\details\\thumb-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\details\\thumb-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\details\\thumb-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\details\\thumb-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\details\\thumb-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\details\\thumb-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\details\\thumb-4.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\details\\thumb-4.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\discount\\pd-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\discount\\pd-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\discount\\pd-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\discount\\pd-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\discount\\pd-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\discount\\pd-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\discount\\pd-4.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\discount\\pd-4.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\discount\\pd-5.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\discount\\pd-5.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\discount\\pd-6.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\discount\\pd-6.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-1.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-10.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-10.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-11.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-11.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-12.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-12.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-2.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-3.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-4.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-4.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-5.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-5.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-6.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-6.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-7.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-7.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-8.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-8.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\img\\product\\product-9.jpg",
+      "PackagePath": "staticwebassets\\LayoutOgani\\img\\product\\product-9.jpg"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\LayoutOgani\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\LayoutOgani\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\LayoutOgani\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\LayoutOgani\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\js\\jquery.slicknav.js",
+      "PackagePath": "staticwebassets\\LayoutOgani\\js\\jquery.slicknav.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\js\\main.js",
+      "PackagePath": "staticwebassets\\LayoutOgani\\js\\main.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\js\\mixitup.min.js",
+      "PackagePath": "staticwebassets\\LayoutOgani\\js\\mixitup.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\LayoutOgani\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\LayoutOgani\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\WebQuanLiBanHang\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebQuanLiBanHang.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebQuanLiBanHang.props",
+      "PackagePath": "build\\WebQuanLiBanHang.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebQuanLiBanHang.props",
+      "PackagePath": "buildMultiTargeting\\WebQuanLiBanHang.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebQuanLiBanHang.props",
+      "PackagePath": "buildTransitive\\WebQuanLiBanHang.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

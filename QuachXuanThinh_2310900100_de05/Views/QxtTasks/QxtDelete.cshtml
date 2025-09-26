@@ -1,0 +1,48 @@
+﻿@model QuachXuanThinh_2310900100_de05.Models.QxtTask
+
+@{
+    ViewData["Title"] = "Xóa công việc";
+}
+
+<h1>Xóa nhân viên</h1>
+
+<h3>Bạn chắc chắn muốn xóa nhân viên này?</h3>
+<div>
+    <h4>QxtEmployee</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtTaskName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtTaskName)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtTaskLevel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtTaskLevel)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtStartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtStartDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtTaskStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtTaskStatus)
+        </dd>
+    </dl>
+
+    <form asp-action="QxtDelete">
+        <input type="hidden" asp-for="QxtTaskId" />
+        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+        <a asp-action="QxtIndex" class="btn btn-secondary">Quay lại danh sách</a>
+    </form>
+</div>

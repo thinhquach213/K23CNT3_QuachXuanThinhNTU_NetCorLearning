@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Purple Admin - OGANI</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/LayoutAdmin/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/LayoutAdmin/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="~/LayoutAdmin/assets/css/style.css">
+    <link rel="shortcut icon" href="~/LayoutAdmin/assets/images/favicon.ico" />
+</head>
+<body>
+    <div class="container-scroller">
+        <!-- Navbar -->
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo" href="index.html">
+                    <img src="~/LayoutAdmin/assets/images/logo.svg" alt="logo" />
+                </a>
+                <a class="navbar-brand brand-logo-mini" href="index.html">
+                    <img src="~/LayoutAdmin/assets/images/logo-mini.svg" alt="logo" />
+                </a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+
+                <div class="search-field d-none d-md-block">
+                    <form class="d-flex align-items-center h-100" action="#">
+                        <div class="input-group">
+                            <div class="input-group-prepend bg-transparent">
+                                <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                            </div>
+                            <input type="text" class="form-control bg-transparent border-0" placeholder="Tìm kiếm...">
+                        </div>
+                    </form>
+                </div>
+
+                <ul class="navbar-nav navbar-nav-right">
+                    <!-- User Profile -->
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+                            <div class="nav-profile-img">
+                                <img src="~/LayoutAdmin/assets/images/faces/face1.jpg" alt="image">
+                                <span class="availability-status online"></span>
+                            </div>
+                            <div class="nav-profile-text">
+                                <p class="mb-1 text-black">David Grey</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="mdi mdi-account me-2 text-success"></i> Hồ sơ
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <i class="mdi mdi-logout me-2 text-primary"></i> Đăng xuất
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <!-- User Info -->
+                    <li class="nav-item nav-profile">
+                        <a href="#" class="nav-link">
+                            <div class="nav-profile-image">
+                                <img src="~/LayoutAdmin/assets/images/faces/face1.jpg" alt="profile">
+                                <span class="login-status online"></span>
+                            </div>
+                            <div class="nav-profile-text d-flex flex-column">
+                                <span class="font-weight-bold mb-2">David Grey. H</span>
+                                <span class="text-secondary text-small">Project Manager</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- Menu Items -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">
+                            <span class="menu-title">Dashboard</span>
+                            <i class="mdi mdi-home menu-icon"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#ql-sanpham" aria-expanded="false">
+                            <span class="menu-title">Quản Lý Sản Phẩm</span>
+                            <i class="menu-arrow"></i>
+                            <i class="mdi mdi-package-variant menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="ql-sanpham">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="admin" asp-controller="HomeAdmin" asp-action="DanhMucSanPham">Danh Mục Sản Phẩm</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/admin/loaisanpham">Loại Sản Phẩm</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/donhang">
+                            <span class="menu-title">Quản Lý Đơn Hàng</span>
+                            <i class="mdi mdi-cart menu-icon"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/khachhang">
+                            <span class="menu-title">Khách Hàng</span>
+                            <i class="mdi mdi-account-multiple menu-icon"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/thongke">
+                            <span class="menu-title">Thống Kê</span>
+                            <i class="mdi mdi-chart-bar menu-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <!-- Page Header -->
+                    <div class="page-header">
+                        <h3 class="page-title">
+                            <span class="page-title-icon bg-gradient-primary text-white me-2">
+                                <i class="mdi mdi-home"></i>
+                            </span>
+                            @ViewData["Title"]
+                        </h3>
+                    </div>
+
+                    <!-- Render Body -->
+                    @RenderBody()
+                </div>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="container-fluid d-flex justify-content-between">
+                        <span class="text-muted d-block text-center text-sm-start d-sm-inline-block">
+                            Copyright © OGANI Store 2024
+                        </span>
+                        <span class="float-none float-sm-end mt-1 mt-sm-0 text-end">
+                            Purple Admin Template
+                        </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/LayoutAdmin/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="~/LayoutAdmin/assets/js/off-canvas.js"></script>
+    <script src="~/LayoutAdmin/assets/js/hoverable-collapse.js"></script>
+    <script src="~/LayoutAdmin/assets/js/misc.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

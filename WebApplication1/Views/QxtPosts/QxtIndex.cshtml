@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebApplication1.Models.QxtPost>
+
+@{
+    ViewData["Title"] = "Quan li bai viet";
+}
+<div class="d-flex justify-content-between align-items-center mb-2">
+    <h1>@ViewData["Title"]</h1>
+    <p>
+        <a asp-action="QxtCreate" class="btn btn-primary">Them moi</a>
+    </p>
+</div>
+
+<table class="table table-bordered ">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.QxtId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QxtTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QxtImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QxtContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QxtStatus)
+            </th>
+            <th>Chuc nang</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QxtId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QxtTitle)
+                </td>
+                <td>
+                    <img src="@Url.Content("~/" + item.QxtImage)" style="width:50px" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QxtContent)
+                </td>
+                <td class="d-flex justify-content-between align-items-center">
+                    @if (item.QxtStatus == true)
+                    {
+                        <span class="badge bg-success">Show</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Hide</span>
+                    }
+                </td>
+                <td>
+                    <div class="d-flex gap-1 flex-wrap text-center">
+                        <a asp-action="QxtEdit" asp-route-qxtId="@item.QxtId" class="btn btn-success btn-sm">Sua</a>
+                        <a asp-action="QxtDetails" asp-route-qxtId="@item.QxtId" class="btn btn-info btn-sm">Xem</a>
+                        <a asp-action="QxtDelete" asp-route-qxtId="@item.QxtId" class="btn btn-danger btn-sm">Xoa</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

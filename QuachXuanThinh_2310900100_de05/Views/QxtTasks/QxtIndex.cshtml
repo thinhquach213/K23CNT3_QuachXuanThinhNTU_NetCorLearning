@@ -1,0 +1,51 @@
+﻿ @model IEnumerable<QuachXuanThinh_2310900100_de05.Models.QxtTask>
+
+@{
+    ViewData["Title"] = "Chi tiet danh sach";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1>@ViewData["Title"]</h1>
+    <a asp-action="QxtCreate" class="btn btn-primary">Thêm mới công việc</a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-light">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.QxtTaskId)</th>
+            <th>@Html.DisplayNameFor(model => model.QxtTaskName)</th>
+            <th>@Html.DisplayNameFor(model => model.QxtTaskLevel)</th>
+            <th>@Html.DisplayNameFor(model => model.QxtStartDate)</th>
+            <th>@Html.DisplayNameFor(model => model.QxtTaskStatus)</th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.QxtTaskId</td>
+                <td>@item.QxtTaskName</td>
+                <td>@item.QxtTaskLevel</td>
+                <td>@item.QxtStartDate.ToString("dd/MM/yyyy")</td>
+                <td>
+                    @if (item.QxtTaskStatus == true)
+                    {
+                        <span class="badge bg-success">Show</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Hide</span>
+                    }
+                </td>
+                <td>
+                    <div class="btn-group btn-group-sm" role="group">
+                        <a asp-action="QxtEdit" asp-route-id="@item.QxtTaskId" class="btn btn-success">Sửa</a>
+                        <a asp-action="QxtDetails" asp-route-id="@item.QxtTaskId" class="btn btn-info">Chi tiết</a>
+                        <a asp-action="QxtDelete" asp-route-id="@item.QxtTaskId" class="btn btn-danger">Xóa</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

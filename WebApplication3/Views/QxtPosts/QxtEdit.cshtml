@@ -1,0 +1,64 @@
+﻿@model WebApplication3.Models.QxtPost
+
+@{
+    ViewData["Title"] = "Chỉnh sửa bài viết";
+}
+
+<div class="card shadow-sm mx-auto mt-4" style="max-width: 200px;">
+    <div class="card-header">
+        <h1 class="h4 mb-0">@ViewData["Title"]</h1>
+    </div>
+
+    <div class="card-body">
+        <form asp-action="QxtEdit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <input type="hidden" asp-for="QxtId" />
+
+            <div class="mb-3">
+                <label asp-for="QxtTitle" class="form-label"></label>
+                <input asp-for="QxtTitle" class="form-control" />
+                <span asp-validation-for="QxtTitle" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Ảnh hiện tại</label><br />
+                @if (!string.IsNullOrEmpty(Model.QxtImage))
+                {
+                    <img src="~/@Model.QxtImage" asp-append-version="true" alt="Ảnh hiện tại" style="max-height: 150px;" />
+
+                }
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Chọn ảnh mới (nếu muốn thay)</label>
+                <input name="QxtImage" type="file" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="QxtContent" class="form-label"></label>
+                <textarea asp-for="QxtContent" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="QxtContent" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="QxtStatus" class="form-label">Trạng thái</label>
+                <select asp-for="QxtStatus" class="form-select">
+                    <option value="">-- Chọn trạng thái --</option>
+                    <option value="false" selected="@(!Model.QxtStatus)">Tạm ẩn</option>
+                    <option value="true" selected="@(Model.QxtStatus)">Hiển thị</option>
+                </select>
+                <span asp-validation-for="QxtStatus" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a asp-action="QxtIndex" class="btn btn-secondary">Quay lại</a>
+                <button type="submit" class="btn btn-primary">Lưu lại</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

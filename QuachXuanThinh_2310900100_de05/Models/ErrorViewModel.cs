@@ -1,0 +1,9 @@
+namespace QuachXuanThinh_2310900100_de05.Models
+{
+    public class ErrorViewModel
+    {
+        public string? RequestId { get; set; }
+
+        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    }
+}

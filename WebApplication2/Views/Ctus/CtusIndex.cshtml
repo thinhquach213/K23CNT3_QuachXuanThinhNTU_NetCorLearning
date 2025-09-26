@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebApplication2.Models.Ctu>
+
+@{
+    ViewData["Title"] = "Quản lý bài viết";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-2">
+    <h1>@ViewData["Title"]</h1>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Thêm mới</a>
+    </p>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CtuId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CtuTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CtuImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CtuContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CtuStatus)
+            </th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.CtuId)</td>
+                <td>@Html.DisplayFor(modelItem => item.CtuTitle)</td>
+                <td>
+                    <img src="@Url.Content("~/" + item.CtuImage)" style="width: 50px;" />
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.CtuContent)</td>
+                <td>
+                    @if (item.CtuStatus == true)
+                    {
+                        <span class="badge bg-success">Hiện</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Ẩn</span>
+                    }
+
+                </td>
+                <td>
+                    <div class="d-flex gap-1 flex-wrap text-center">
+                        <a asp-action="Edit" asp-route-id="@item.CtuId" class="btn btn-success btn-sm">Sửa</a>
+                        <a asp-action="Details" asp-route-id="@item.CtuId" class="btn btn-info btn-sm">Xem</a>
+                        <a asp-action="Delete" asp-route-id="@item.CtuId" class="btn btn-danger btn-sm">Xóa</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,46 @@
+﻿@model WebApplication2.Models.Ctu
+
+@{
+    ViewData["Title"] = "Xóa bài viết";
+}
+
+<h3>Bạn chắc chắn muốn xóa?</h3>
+<div>
+    <h4>Ctu</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CtuTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CtuTitle)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CtuImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CtuImage)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CtuContent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CtuContent)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CtuStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CtuStatus)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CtuId" />
+        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+        <a asp-action="Index">Quay lại danh sách</a>
+    </form>
+</div>

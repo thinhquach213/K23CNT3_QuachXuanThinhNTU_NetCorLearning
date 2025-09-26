@@ -1,0 +1,43 @@
+﻿@model WebApplication1.Models.QxtPost
+
+@{
+    ViewData["Title"] = "Xem bài viết";
+}
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtTitle)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtImage)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Url.Content("~/" + Model.QxtImage)" style="width:50px" />
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtContent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtContent)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QxtStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QxtStatus)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="QxtEdit" asp-route-qxtId="@Model?.QxtId">Chỉnh sửa</a> |
+    <a asp-action="QxtIndex">Quay lại danh sách</a>
+</div>

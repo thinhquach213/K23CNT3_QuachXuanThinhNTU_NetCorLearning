@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|e:\\k23cnt3_quachxuanthinhntu_netcorlearning\\thuchanhwebmvc\\views\\shared\\components\\loaispmenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|solutionrelative:views\\shared\\components\\loaispmenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|e:\\k23cnt3_quachxuanthinhntu_netcorlearning\\thuchanhwebmvc\\viewcomponents\\loaispmenuviewcomponents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|solutionrelative:viewcomponents\\loaispmenuviewcomponents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|e:\\k23cnt3_quachxuanthinhntu_netcorlearning\\thuchanhwebmvc\\repository\\loaisprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|solutionrelative:repository\\loaisprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|e:\\k23cnt3_quachxuanthinhntu_netcorlearning\\thuchanhwebmvc\\repository\\iloaisprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|solutionrelative:repository\\iloaisprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|e:\\k23cnt3_quachxuanthinhntu_netcorlearning\\thuchanhwebmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|e:\\k23cnt3_quachxuanthinhntu_netcorlearning\\thuchanhwebmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|e:\\k23cnt3_quachxuanthinhntu_netcorlearning\\thuchanhwebmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|e:\\k23cnt3_quachxuanthinhntu_netcorlearning\\thuchanhwebmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|e:\\k23cnt3_quachxuanthinhntu_netcorlearning\\thuchanhwebmvc\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{35742918-A432-4A35-B17A-A59ACC49EB89}|ThucHanhWebMVC.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Views\\Shared\\Components\\LoaiSpMenu\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\LoaiSpMenu\\Default.cshtml",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Views\\Shared\\Components\\LoaiSpMenu\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\LoaiSpMenu\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T18:50:20.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoaiSpMenuViewComponents.cs",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\ViewComponents\\LoaiSpMenuViewComponents.cs",
+              "RelativeDocumentMoniker": "ViewComponents\\LoaiSpMenuViewComponents.cs",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\ViewComponents\\LoaiSpMenuViewComponents.cs",
+              "RelativeToolTip": "ViewComponents\\LoaiSpMenuViewComponents.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T18:45:34.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoaiSpRepository.cs",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Repository\\LoaiSpRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\LoaiSpRepository.cs",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Repository\\LoaiSpRepository.cs",
+              "RelativeToolTip": "Repository\\LoaiSpRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T18:28:50.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ILoaiSpRepository.cs",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Repository\\ILoaiSpRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ILoaiSpRepository.cs",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Repository\\ILoaiSpRepository.cs",
+              "RelativeToolTip": "Repository\\ILoaiSpRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T18:28:07.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T17:48:54.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:47:54.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-25T16:39:00.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-25T16:37:14.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\K23CNT3_QuachXuanThinhNTU_NetCorLearning\\ThucHanhWebMVC\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T14:19:28.044Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

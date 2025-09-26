@@ -1,0 +1,53 @@
+﻿@model QuachXuanThinh_2310900100_de05.Models.QxtTask
+
+@{
+    ViewData["Title"] = "Thêm mới danh sach";
+}
+
+<div class="card shadow-sm mx-auto mt-4" style="max-width: 400px;">
+    <div class="card-header">
+        <h1 class="h5 mb-0">@ViewData["Title"]</h1>
+    </div>
+    <div class="card-body">
+        <form asp-action="QxtCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-2">
+                <label asp-for="QxtTaskName" class="control-label"></label>
+                <input asp-for="QxtTaskName" class="form-control" />
+                <span asp-validation-for="QxtTaskName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="QxtTaskLevel" class="control-label"></label>
+                <input asp-for="QxtTaskLevel" class="form-control" />
+                <span asp-validation-for="QxtTaskLevel" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="QxtStartDate" class="control-label"></label>
+                <input asp-for="QxtStartDate" class="form-control" type="date" />
+                <span asp-validation-for="QxtStartDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="QxtTaskStatus" class="control-label"></label>
+                <select asp-for="QxtTaskStatus" class="form-control">
+                    <option value="">-- Chọn trạng thái --</option>
+                    <option value="true">Hiển thị</option>
+                    <option value="false">Ẩn</option>
+                </select>
+                <span asp-validation-for="QxtTaskStatus" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a asp-action="QxtIndex" class="btn btn-secondary">Quay lại</a>
+                <button type="submit" class="btn btn-primary">Ghi lại</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

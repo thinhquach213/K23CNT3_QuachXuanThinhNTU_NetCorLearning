@@ -1,0 +1,54 @@
+﻿@model QuachXuanThinh_2310900100_de05.Models.QxtTask
+
+@{
+    ViewData["Title"] = "Chỉnh danh sach";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h4>QxtTask</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="QxtEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="QxtTaskId" />
+
+            <div class="form-group mb-2">
+                <label asp-for="QxtTaskName" class="control-label"></label>
+                <input asp-for="QxtTaskName" class="form-control" />
+                <span asp-validation-for="QxtTaskName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="QxtTaskLevel" class="control-label"></label>
+                <input asp-for="QxtTaskLevel" class="form-control" />
+                <span asp-validation-for="QxtTaskLevel" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="QxtStartDate" class="control-label"></label>
+                <input asp-for="QxtStartDate" class="form-control" type="date" />
+                <span asp-validation-for="QxtStartDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="QxtTaskStatus" class="control-label"></label>
+                <select asp-for="QxtTaskStatus" class="form-control">
+                    <option value="">-- Chọn trạng thái --</option>
+                    <option value="true" selected="@(Model?.QxtTaskStatus == true)">Show</option>
+                    <option value="false" selected="@(Model?.QxtTaskStatus == false)">Hide</option>
+                </select>
+                <span asp-validation-for="QxtTaskStatus" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Ghi lại" class="btn btn-primary" />
+                <a asp-action="QxtIndex" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
