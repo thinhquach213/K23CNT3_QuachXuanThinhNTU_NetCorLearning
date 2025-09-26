@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\qxtlesson02.props" />
-</Project>
