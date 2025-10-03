@@ -6,8 +6,8 @@ namespace WebBanHang.Repository
     {
         TLoaiSp Add(TLoaiSp loaiSp);
         TLoaiSp Update(TLoaiSp loaiSp);
-        TLoaiSp Delete(string maloaiSp);
-        TLoaiSp GetLoaiSp(string maloaiSp);
+        TLoaiSp? Delete(string maLoaiSp);   
+        TLoaiSp? GetLoaiSp(string maLoaiSp);
         IEnumerable<TLoaiSp> GetAllLoaiSp();
     }
 }

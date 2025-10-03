@@ -33,7 +33,7 @@ namespace WebBanHang.Repository
 
         public IEnumerable<TLoaiSp> GetAllLoaiSp()
         {
-            return _context.TLoaiSps.ToList();
+            return _context.TLoaiSps;
         }
 
         public TLoaiSp GetLoaiSp(string maloaiSp)
@@ -43,7 +43,7 @@ namespace WebBanHang.Repository
 
         public TLoaiSp Update(TLoaiSp loaiSp)
         {
-            _context.TLoaiSps.Update(loaiSp);
+            _context.Update(loaiSp);
             _context.SaveChanges();
             return loaiSp;
         }

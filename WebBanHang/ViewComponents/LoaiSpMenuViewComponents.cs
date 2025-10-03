@@ -5,16 +5,16 @@ namespace WebBanHang.ViewComponents
 {
         public class LoaiSpMenuViewComponent : ViewComponent
         {
-            private readonly ILoaiSanPhamRepository _loaiSpRepository;
+            private readonly ILoaiSanPhamRepository _loaiSp;
 
             public LoaiSpMenuViewComponent(ILoaiSanPhamRepository loaiSpRepository)
             {
-                _loaiSpRepository = loaiSpRepository;
+                _loaiSp = loaiSpRepository;
             }
 
             public IViewComponentResult Invoke()
             {
-                var loaisp = _loaiSpRepository.GetAllLoaiSp().OrderBy(x => x.Loai);
+                var loaisp = _loaiSp.GetAllLoaiSp().OrderBy(x => x.Loai);
                 return View(loaisp);
             }
         }
