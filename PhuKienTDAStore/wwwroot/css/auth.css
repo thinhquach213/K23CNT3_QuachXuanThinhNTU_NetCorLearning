@@ -1,0 +1,125 @@
+﻿/* =========================================================
+   ĐĂNG NHẬP / ĐĂNG KÝ 
+========================================================= */
+
+// Biến màu sắc
+$shopee-primary: #ee4d2d;
+$shopee-primary-dark: #d73211;
+$shopee-primary-light: #ff6b4a;
+$shopee-background: #f5f5f5;
+$shopee-border: #dbdbdb;
+$shopee-text: #333;
+$shopee-text-light: #666;
+$shopee-white: #fff;
+
+// Mixins
+@mixin card-styles {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+@mixin button-styles {
+    border-radius: 4px;
+    font-weight: 600;
+    background: $shopee-primary;
+    border: none;
+    color: $shopee-white;
+    padding: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+
+    &:hover {
+        background: $shopee-primary-dark;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba($shopee-primary, 0.3);
+    }
+}
+
+@mixin form-control-styles {
+    border: 1px solid $shopee-border;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 0.9rem;
+
+    &:focus {
+        border-color: $shopee-primary;
+        box-shadow: 0 0 0 2px rgba($shopee-primary, 0.1);
+    }
+}
+
+// Styles chính
+.login-page, .register-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: $shopee-background;
+    padding: 40px 0;
+}
+
+.login-page, .register-page {
+    .card
+
+{
+    @include card-styles;
+}
+
+.card-header {
+    background: $shopee-white;
+    border-bottom: 1px solid $shopee-border;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    color: $shopee-primary;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.form-control {
+    @include form-control-styles;
+}
+
+}
+
+.btn-login, .btn-register {
+    @include button-styles;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $shopee-text-light;
+    font-size: 0.8rem;
+    margin: 20px 0;
+    &::before, &::after
+
+{
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid $shopee-border;
+}
+
+&::before {
+    margin-right: 10px;
+}
+
+&::after {
+    margin-left: 10px;
+}
+
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .login-page, .register-page
+
+{
+    padding: 20px 0;
+}
+}

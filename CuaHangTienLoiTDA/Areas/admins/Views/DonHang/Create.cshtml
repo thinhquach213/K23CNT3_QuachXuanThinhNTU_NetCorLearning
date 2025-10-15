@@ -1,0 +1,44 @@
+﻿@model CuaHangTienLoiTDA.Models.DonHang
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="text-primary mb-3">Thêm đơn hàng mới</h2>
+
+    <div class="card shadow p-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="MaKH" class="form-label">Khách hàng</label>
+                @if (ViewBag.MaKH != null)
+                {
+                    <select asp-for="MaKH" class="form-control" asp-items="(SelectList)ViewBag.MaKH">
+                        <option value="">-- Chọn khách hàng --</option>
+                    </select>
+                }
+                else
+                {
+                    <input asp-for="MaKH" class="form-control" type="number" />
+                }
+                <span asp-validation-for="MaKH" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="TongTien" class="form-label"></label>
+                <input asp-for="TongTien" class="form-control" type="number" min="0" step="1000" placeholder="Nhập tổng tiền" />
+                <span asp-validation-for="TongTien" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">← Quay lại</a>
+                <button type="submit" class="btn btn-success">Lưu đơn hàng</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

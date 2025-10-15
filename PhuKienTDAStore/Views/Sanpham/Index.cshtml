@@ -1,0 +1,480 @@
+﻿@using System.Security.Claims
+@{
+    var isLoggedIn = User?.Identity?.IsAuthenticated ?? false;
+    var userEmail = User?.FindFirst(ClaimTypes.Email)?.Value
+                    ?? Context.Session.GetString("UserEmail");
+}
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phụ Kiện TDA</title>
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- CSS riêng -->
+    <link rel="stylesheet" href="~/css/auth.css" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="bg-dark text-white">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <!-- Logo -->
+            <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="assets/img/logo.png" alt="Logo" style="height:80px;">
+                <small class="ms-3 fst-italic text-white fs-6">Úy Tín Hàng Đầu</small>
+            </a>
+
+            <!-- Search -->
+            <form class="d-flex mx-4 flex-grow-1">
+                <input class="form-control form-control-lg rounded-pill" type="search" placeholder="Tìm kiếm phụ kiện...">
+                <button class="btn btn-link text-white ms-n5" type="submit"><i class="bi bi-search fs-5"></i></button>
+            </form>
+
+            <!-- Hotline + Icons -->
+            <div class="d-flex align-items-center">
+                <a href="tel:0123456789" class="btn btn-lg text-white rounded-pill px-4 me-4" style="background-color:#c7a062; font-weight:600;">
+                    <i class="bi bi-telephone-fill me-2"></i> Hotline: 0377749999
+                </a>
+                <a asp-controller="Cart" asp-action="Index" class="text-white me-4">
+                    <i class="bi bi-bag fs-4"></i>
+                </a>
+                @if (isLoggedIn)
+                {
+                    <div class="dropdown">
+                        <a class="text-white dropdown-toggle text-decoration-none" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-4 me-1"></i> @userEmail
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" asp-controller="Auth" asp-action="DangXuat">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                }
+                else
+                {
+                    <a asp-controller="Auth" asp-action="DangNhap" class="text-white">
+                        <i class="bi bi-person fs-4"></i>
+                    </a>
+                }
+
+            </div>
+        </div>
+
+        <!-- MENU -->
+        <!-- HEADER MENU -->
+        <nav class="bg-white border-top">
+            <div class="container d-flex align-items-center">
+
+                <!-- Danh mục có submenu -->
+                <div class="dropdown position-static">
+                    <a href="#" class="btn btn-lg text-white fw-bold me-5 dropdown-toggle"
+                       style="background-color:#c7a062;" id="danhmucMenu"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-list"></i> Danh mục phụ kiện
+                    </a>
+
+                    <ul class="dropdown-menu shadow mt-0 p-3" aria-labelledby="danhmucMenu">
+                        <div class="d-flex">
+                            <div class="me-4">
+                                <h6 class="fw-bold">Ví Nam Cổ Điển</h6>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Ví Da Bò
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Ví Cầm Tay
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Ví Đa Năng
+                                </a>
+                            </div>
+                            <div class="me-4">
+                                <h6 class="fw-bold">Thắt Lưng</h6>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Thắt Lưng Da
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Thắt Lưng Vải
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Thắt Lưng Kim Loại
+                                </a>
+                            </div>
+                            <div class="me-4">
+                                <h6 class="fw-bold">Túi Xách & Balo</h6>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Túi Đeo Chéo
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Balo Laptop
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Túi Du Lịch
+                                </a>
+                            </div>
+                            <div class="me-4">
+                                <h6 class="fw-bold">Phụ Kiện Thời Trang</h6>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Kính Mát
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Mũ Len
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Khăn Choàng
+                                </a>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold">Giày Dép</h6>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Giày Da Nam
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Giày Thể Thao
+                                </a>
+                                <a asp-controller="Sanpham" asp-action="index" class="nav-link text-dark me-4">
+                                    Dép Quai Ngang
+                                </a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <!-- Menu bên cạnh -->
+                <a href="@Url.Action("Index","Home")#flash-sale" class="nav-link text-dark me-4">
+                    <i class="bi bi-ticket-perforated"></i> Khuyến mãi
+                </a>
+                <a href="@Url.Action("Index","Home")#services" class="nav-link text-dark me-4">
+                    <i class="bi bi-shield"></i> Dịch vụ
+                </a>
+
+                <a href="@Url.Action("Index","Home")#footer" class="nav-link text-dark me-4">
+                    <i class="bi bi-telephone"></i> Liên hệ
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="bannersp">
+        <div class="wrap inner">
+            <nav class="breadcrumb">
+                <a asp-controller="Home" asp-action="Index">
+                    Trang chủ
+                </a> / <span>Phụ Kiện Thời Trang</span>
+            </nav>
+            <h1 class="page-title">PHỤ KIỆN THỜI TRANG</h1>
+        </div>
+    </section>
+
+    <!-- Danh mục sản phẩm -->
+    <div class="wrap catalog">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>DANH MỤC PHỤ KIỆN</h2>
+            <a class="nav-link" href="#">Ví Nam <span>(12)</span></a>
+            <a class="nav-link" href="#">Thắt Lưng <span>(8)</span></a>
+            <a class="nav-link" href="#">Túi Xách <span>(15)</span></a>
+            <a class="nav-link" href="#">Balo <span>(10)</span></a>
+            <a class="nav-link" href="#">Giày Dép <span>(20)</span></a>
+            <a class="nav-link" href="#">Kính Mát <span>(6)</span></a>
+            <a class="nav-link" href="#">Mũ Nón <span>(5)</span></a>
+            <hr>
+
+            <h2>THƯƠNG HIỆU</h2>
+            <a class="nav-link" href="#">TDA Premium <span>(15)</span></a>
+            <a class="nav-link" href="#">Leather Craft <span>(8)</span></a>
+            <a class="nav-link" href="#">Urban Style <span>(12)</span></a>
+            <a class="nav-link" href="#">Classic Men <span>(10)</span></a>
+            <hr>
+
+            <h2>LỌC THEO GIÁ</h2>
+            <div class="price-filter">
+                <input id="minPrice" type="range" min="50000" max="5000000" value="50000" step="10000">
+                <input id="maxPrice" type="range" min="50000" max="5000000" value="5000000" step="10000">
+                <div class="price-text">Giá <strong id="priceText">50.000đ — 5.000.000đ</strong></div>
+                <button class="btn btn-gold" id="btnFilter">LỌC</button>
+            </div>
+
+            <h2 class="mt-4">CHẤT LIỆU</h2>
+            <a class="nav-link" href="#">Da Thật <span>(18)</span></a>
+            <a class="nav-link" href="#">Da Tổng Hợp <span>(12)</span></a>
+            <a class="nav-link" href="#">Vải Canvas <span>(8)</span></a>
+            <a class="nav-link" href="#">Kim Loại <span>(5)</span></a>
+        </aside>
+
+        <!-- Content -->
+        <main class="content">
+            <div class="toolbar">
+                <label class="sort">
+                    <span>Sắp xếp:</span>
+                    <select id="sort">
+                        <option value="default">Mặc định</option>
+                        <option value="pop">Phổ biến</option>
+                        <option value="rate">Đánh giá cao</option>
+                        <option value="new">Mới nhất</option>
+                        <option value="asc">Giá thấp → cao</option>
+                        <option value="desc">Giá cao → thấp</option>
+                    </select>
+                </label>
+            </div>
+
+            <!-- Lưới sản phẩm -->
+            <div class="row">
+                <!-- Ví da bò cao cấp -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/8B4513/FFFFFF?text=V%C3%AD+Da+B%C3%B2"
+                             class="card-img-top" alt="Ví da bò cao cấp">
+                        <div class="card-body">
+                            <h6 class="card-title">Ví Da Bò Cao Cấp</h6>
+                            <p class="text-danger fw-bold">450.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="21" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thắt lưng da nam -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/2F4F4F/FFFFFF?text=Th%E1%BA%AFt+L%C6%B0ng+Da"
+                             class="card-img-top" alt="Thắt lưng da nam">
+                        <div class="card-body">
+                            <h6 class="card-title">Thắt Lưng Da Nam</h6>
+                            <p class="text-danger fw-bold">280.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="22" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Balo laptop chống sốc -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/4682B4/FFFFFF?text=Balo+Laptop"
+                             class="card-img-top" alt="Balo laptop">
+                        <div class="card-body">
+                            <h6 class="card-title">Balo Laptop Chống Sốc</h6>
+                            <p class="text-danger fw-bold">550.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="23" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Túi đeo chéo da -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/696969/FFFFFF?text=T%C3%BAi+%C4%90eo+Ch%C3%A9o"
+                             class="card-img-top" alt="Túi đeo chéo">
+                        <div class="card-body">
+                            <h6 class="card-title">Túi Đeo Chéo Da</h6>
+                            <p class="text-danger fw-bold">320.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="24" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hàng sản phẩm thứ 2 -->
+            <div class="row">
+                <!-- Giày da nam công sở -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/8B4513/FFFFFF?text=Gi%C3%A0y+Da+Nam"
+                             class="card-img-top" alt="Giày da nam">
+                        <div class="card-body">
+                            <h6 class="card-title">Giày Da Nam Công Sở</h6>
+                            <p class="text-danger fw-bold">850.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="25" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kính mát thời trang -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/000000/FFFFFF?text=K%C3%ADnh+M%C3%A1t"
+                             class="card-img-top" alt="Kính mát">
+                        <div class="card-body">
+                            <h6 class="card-title">Kính Mát Thời Trang</h6>
+                            <p class="text-danger fw-bold">180.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="26" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mũ len mùa đông -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/FF6347/FFFFFF?text=M%C5%A9+Len"
+                             class="card-img-top" alt="Mũ len">
+                        <div class="card-body">
+                            <h6 class="card-title">Mũ Len Mùa Đông</h6>
+                            <p class="text-danger fw-bold">120.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="27" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vòng tay da cá sấu -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/228B22/FFFFFF?text=V%C3%B2ng+Tay+Da"
+                             class="card-img-top" alt="Vòng tay da">
+                        <div class="card-body">
+                            <h6 class="card-title">Vòng Tay Da Cá Sấu</h6>
+                            <p class="text-danger fw-bold">150.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="28" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hàng sản phẩm thứ 3 -->
+            <div class="row">
+                <!-- Ví cầm tay nữ -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/FF69B4/FFFFFF?text=V%C3%AD+N%E1%BB%AF"
+                             class="card-img-top" alt="Ví nữ">
+                        <div class="card-body">
+                            <h6 class="card-title">Ví Cầm Tay Nữ</h6>
+                            <p class="text-danger fw-bold">380.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="29" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Túi du lịch đa năng -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/4169E1/FFFFFF?text=T%C3%BAi+Du+L%E1%BB%8Bch"
+                             class="card-img-top" alt="Túi du lịch">
+                        <div class="card-body">
+                            <h6 class="card-title">Túi Du Lịch Đa Năng</h6>
+                            <p class="text-danger fw-bold">680.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="30" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giày thể thao nam -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/000080/FFFFFF?text=Gi%C3%A0y+Th%E1%BB%83+Thao"
+                             class="card-img-top" alt="Giày thể thao">
+                        <div class="card-body">
+                            <h6 class="card-title">Giày Thể Thao Nam</h6>
+                            <p class="text-danger fw-bold">420.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="31" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Khăn choàng len -->
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center product-card">
+                        <img src="https://via.placeholder.com/300x300/FFD700/FFFFFF?text=Kh%C4%83n+Cho%C3%A0ng"
+                             class="card-img-top" alt="Khăn choàng">
+                        <div class="card-body">
+                            <h6 class="card-title">Khăn Choàng Len</h6>
+                            <p class="text-danger fw-bold">95.000₫</p>
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="32" class="btn btn-danger btn-sm">
+                                Thêm vào giỏ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer text-white bg-dark">
+        <div class="container py-5 d-flex flex-wrap justify-content-between">
+
+            <!-- Logo + liên hệ -->
+            <div class="mb-4">
+                <h4 class="fw-bold">Phụ Kiện TDA</h4>
+                <p>Phong cách - Đẳng cấp - Khác biệt</p>
+                <p><i class="bi bi-geo-alt"></i> Trụ sở: Tp. Hà Nội</p>
+                <p><i class="bi bi-telephone"></i> 0377749999</p>
+                <p><i class="bi bi-envelope"></i> Ahihi12345@gmail.com</p>
+            </div>
+
+            <!-- Links -->
+            <div class="mb-4">
+                <h6 class="fw-bold">TÌM HIỂU THÊM</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Trang chủ</a></li>
+                    <li><a href="#" class="text-white">Giới thiệu</a></li>
+                    <li><a href="#" class="text-white">Bộ sưu tập</a></li>
+                    <li><a href="#" class="text-white">Xu hướng</a></li>
+                </ul>
+            </div>
+
+            <div class="mb-4">
+                <h6 class="fw-bold">HỖ TRỢ KHÁCH HÀNG</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Chính sách bảo hành</a></li>
+                    <li><a href="#" class="text-white">Hướng dẫn chọn size</a></li>
+                    <li><a href="#" class="text-white">Chăm sóc sản phẩm</a></li>
+                    <li><a href="#" class="text-white">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div>
+                <h6 class="fw-bold">THEO DÕI CHÚNG TÔI</h6>
+                <div class="d-flex gap-3 fs-5">
+                    <a href="https://www.facebook.com/khanhnguyen1301" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/d.khanh_1301/" class="text-white"><i class="bi bi-instagram"></i></a>
+                    <a href="https://x.com/i/status/1963981909488198043" class="text-white"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="text-white"><i class="bi bi-youtube"></i></a>
+                </div>
+                <h6 class="fw-bold mt-3">PHƯƠNG THỨC THANH TOÁN</h6>
+                <div class="payment-box d-inline-block px-3 py-2">
+                    <img src="https://taphoa01.vinastar.info/wp-content/uploads/2023/05/logo_acb.png" alt="ACB" style="height:25px; margin-right:10px;">
+                    <img src="https://taphoa01.vinastar.info/wp-content/uploads/2023/05/logo_msb.png" alt="MSB" style="height:25px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bản quyền -->
+        <div class="footer-bottom text-center text-dark py-2">
+            © 2027 Phụ Kiện Store - Làm Vì Đam Mê |
+            Phong Cách Tạo Nên Đẳng Cấp
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

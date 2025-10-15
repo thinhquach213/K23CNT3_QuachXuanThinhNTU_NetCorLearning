@@ -1,0 +1,114 @@
+﻿@model PhuKienTDAStore.Models.KhachHang
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Phụ Kiện TDA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/DangNhap.css" />
+</head>
+
+<body class="bg-light">
+
+    <header class="bg-dark text-white py-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">🖊️ Phụ Kiện TDA</h2>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-light">← Về trang chủ</a>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-lg-5">
+                    <div class="card shadow-lg p-4 border-0 rounded-4">
+
+                        <h3 class="text-center fw-bold mb-1">Đăng ký</h3>
+                        <p class="text-center text-muted mb-4">Tạo tài khoản để mua sắm nhanh hơn</p>
+
+                        @if (ViewBag.Error != null)
+                        {
+                            <div class="alert alert-danger text-center">@ViewBag.Error</div>
+                        }
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger small mb-2"></div>
+
+                        
+                        <form method="post" asp-controller="Auth" asp-action="DangKi">
+                            @Html.AntiForgeryToken()
+
+                            <div class="mb-3">
+                                <label asp-for="HoTen" class="form-label fw-semibold"></label>
+                                <input asp-for="HoTen" class="form-control" placeholder="Nhập họ và tên" required />
+                                <span asp-validation-for="HoTen" class="text-danger small"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Email" class="form-label fw-semibold"></label>
+                                <input asp-for="Email" type="email" class="form-control" placeholder="Nhập email" required />
+                                <span asp-validation-for="Email" class="text-danger small"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="SoDienThoai" class="form-label fw-semibold"></label>
+                                <input asp-for="SoDienThoai" class="form-control" placeholder="Nhập số điện thoại" />
+                                <span asp-validation-for="SoDienThoai" class="text-danger small"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="DiaChi" class="form-label fw-semibold"></label>
+                                <input asp-for="DiaChi" class="form-control" placeholder="Nhập địa chỉ (không bắt buộc)" />
+                                <span asp-validation-for="DiaChi" class="text-danger small"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="MatKhau" class="form-label fw-semibold"></label>
+                                <input asp-for="MatKhau" type="password" class="form-control" placeholder="Nhập mật khẩu" required />
+                                <span asp-validation-for="MatKhau" class="text-danger small"></span>
+                            </div>
+
+                           
+                            <div class="mb-4">
+                                <label for="ConfirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu</label>
+                                <input id="ConfirmPassword" name="ConfirmPassword" type="password" class="form-control" placeholder="Nhập lại mật khẩu" required />
+                            </div>
+
+                            
+                            <button type="submit" class="btn btn-danger w-100 rounded-pill fw-semibold">
+                                <i class="bi bi-person-plus me-1"></i> Tạo tài khoản
+                            </button>
+                        </form>
+
+                        <p class="text-center mt-3 mb-0">
+                            Đã có tài khoản?
+                            <a asp-action="DangNhap" asp-controller="Auth" class="text-danger fw-bold text-decoration-none">
+                                Đăng nhập ngay
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-white bg-dark">
+        <div class="container py-5 d-flex flex-wrap justify-content-between">
+            
+        </div>
+        <div class="footer-bottom text-center text-dark py-2">
+            © 2027 Phụ Kiện Store - Làm Vì Đam Mê
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+</body>
+</html>

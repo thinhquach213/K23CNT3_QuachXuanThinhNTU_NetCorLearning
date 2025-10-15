@@ -1,0 +1,367 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Phụ Kiện Thời Trang</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        /* Shopee Color Scheme */
+        :root {
+            --shoppee-orange: #ee4d2d;
+            --shoppee-light-orange: #ff7337;
+            --shoppee-dark-orange: #d73211;
+            --shoppee-bg: #f5f5f5;
+            --shoppee-text: #333;
+            --shoppee-light-text: #757575;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f53d2d, #f63);
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .auth-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.14);
+            overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .auth-header {
+            background: white;
+            padding: 40px 30px 20px;
+            text-align: center;
+        }
+
+        .auth-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--shoppee-orange);
+            margin-bottom: 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .auth-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--shoppee-text);
+            margin-bottom: 10px;
+        }
+
+        .auth-subtitle {
+            color: var(--shoppee-light-text);
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .auth-body {
+            padding: 0 30px 30px;
+        }
+
+        .form-control {
+            border: 1px solid rgba(0,0,0,.14);
+            border-radius: 2px;
+            padding: 12px;
+            font-size: 14px;
+            transition: all 0.3s;
+            height: 40px;
+        }
+
+            .form-control:focus {
+                border-color: var(--shoppee-orange);
+                box-shadow: 0 0 0 2px rgba(238, 77, 45, 0.1);
+            }
+
+        .form-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--shoppee-text);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .btn-shoppee {
+            background: var(--shoppee-orange);
+            border: none;
+            color: white;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 2px;
+            width: 100%;
+            transition: all 0.3s;
+            height: 40px;
+        }
+
+            .btn-shoppee:hover {
+                background: var(--shoppee-dark-orange);
+                color: white;
+            }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            color: var(--shoppee-light-text);
+            font-size: 12px;
+        }
+
+            .divider::before,
+            .divider::after {
+                content: '';
+                flex: 1;
+                border-bottom: 1px solid #dbdbdb;
+            }
+
+            .divider::before {
+                margin-right: 10px;
+            }
+
+            .divider::after {
+                margin-left: 10px;
+            }
+
+        .social-login {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .social-btn {
+            flex: 1;
+            border: 1px solid rgba(0,0,0,.26);
+            border-radius: 2px;
+            padding: 10px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--shoppee-text);
+            transition: all 0.3s;
+            height: 40px;
+        }
+
+            .social-btn:hover {
+                background: #f8f8f8;
+            }
+
+        .auth-footer {
+            text-align: center;
+            padding: 20px 30px;
+            background: #f5f5f5;
+            border-top: 1px solid #dbdbdb;
+        }
+
+        .auth-link {
+            color: var(--shoppee-orange);
+            font-size: 12px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+            .auth-link:hover {
+                color: var(--shoppee-dark-orange);
+            }
+
+        .helper-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--shoppee-text);
+        }
+
+        .forgot-password {
+            color: var(--shoppee-orange);
+            text-decoration: none;
+        }
+
+            .forgot-password:hover {
+                color: var(--shoppee-dark-orange);
+            }
+
+        .error-message {
+            background: #fff9fa;
+            border: 1px solid #ff424f;
+            border-radius: 2px;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #ff424f;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 1000;
+        }
+
+            .back-home:hover {
+                color: rgba(255,255,255,0.8);
+            }
+
+        .form-check-input:checked {
+            background-color: var(--shoppee-orange);
+            border-color: var(--shoppee-orange);
+        }
+
+        .form-check-input:focus {
+            border-color: var(--shoppee-orange);
+            box-shadow: 0 0 0 0.2rem rgba(238, 77, 45, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <a asp-controller="Home" asp-action="Index" class="back-home">
+        <i class="bi bi-arrow-left"></i> Về trang chủ
+    </a>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Header -->
+            <div class="auth-header">
+                <a asp-controller="Home" asp-action="Index" class="auth-logo">PHỤ KIỆN TDA</a>
+                <h1 class="auth-title">Đăng Nhập</h1>
+                <p class="auth-subtitle">Chào mừng bạn trở lại</p>
+            </div>
+
+            <!-- Body -->
+            <div class="auth-body">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="error-message">
+                        <i class="bi bi-exclamation-circle me-2"></i>@ViewBag.Error
+                    </div>
+                }
+
+                <form method="post" asp-action="DangNhap" asp-controller="Auth">
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">EMAIL</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Nhập email" required />
+                    </div>
+
+                    <!-- Mật khẩu -->
+                    <div class="mb-3">
+                        <label for="matKhau" class="form-label">MẬT KHẨU</label>
+                        <input type="password" name="matKhau" id="matKhau" class="form-control" placeholder="Nhập mật khẩu" required />
+                    </div>
+
+                    <!-- Remember & Forgot Password -->
+                    <div class="helper-links">
+                        <label class="remember-me">
+                            <input type="checkbox" class="form-check-input" id="remember" name="remember" />
+                            Ghi nhớ đăng nhập
+                        </label>
+                        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                    </div>
+
+                    <button type="submit" class="btn-shoppee mb-3">
+                        ĐĂNG NHẬP
+                    </button>
+                </form>
+
+                <div class="divider">HOẶC</div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn">
+                        <i class="bi bi-facebook" style="color: #1877f2;"></i>
+                        Facebook
+                    </button>
+                    <button type="button" class="social-btn">
+                        <i class="bi bi-google" style="color: #ea4335;"></i>
+                        Google
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="auth-footer">
+                <span style="font-size: 12px; color: var(--shoppee-light-text);">
+                    Bạn mới biết đến Phụ Kiện TDA?
+                </span>
+                <a asp-action="DangKi" asp-controller="Auth" class="auth-link ms-1">
+                    Đăng ký
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Hiệu ứng focus cho input
+        const inputs = document.querySelectorAll('.form-control');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function () {
+                this.style.borderColor = 'var(--shoppee-orange)';
+            });
+
+            input.addEventListener('blur', function () {
+                if (!this.value) {
+                    this.style.borderColor = 'rgba(0,0,0,.14)';
+                }
+            });
+        });
+
+        // Kiểm tra form trước khi submit
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const email = document.querySelector('#email').value;
+            const password = document.querySelector('#matKhau').value;
+
+            if (!email || !password) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Auto focus vào email input
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('#email').focus();
+        });
+    </script>
+</body>
+</html>

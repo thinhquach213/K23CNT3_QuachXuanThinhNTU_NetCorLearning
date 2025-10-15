@@ -1,0 +1,815 @@
+﻿@using System.Security.Claims
+@{
+    var isLoggedIn = User?.Identity?.IsAuthenticated ?? false;
+    var userEmail = User?.FindFirst(ClaimTypes.Email)?.Value
+                     ?? Context.Session.GetString("UserEmail");
+    var returnUrl = Context.Request.Path + Context.Request.QueryString;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phụ Kiện TDA</title>
+    <meta name="description" content="Phụ kiện thời trang cao cấp - Ví, túi xách, giày dép, đồng hồ, trang sức và phụ kiện thời trang">
+
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ========== HEADER SECTION ========== -->
+    <header class="text-white full-bleed" style="background-color: #8B0000;">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <!-- Logo -->
+            <a asp-controller="Home" asp-action="Index" class="d-flex align-items-center text-decoration-none">
+                <img src="~/assets/img/logo.png" alt="Logo" style="height:80px;">
+                <small class="ms-3 fst-italic text-white fs-6">Phong cách tạo nên đẳng cấp</small>
+            </a>
+
+            <!-- Search -->
+            <form asp-controller="SanPham" asp-action="Search" method="get" class="d-flex mx-4 flex-grow-1">
+                <input class="form-control form-control-lg rounded-pill" name="q"
+                       type="search" placeholder="Tìm kiếm phụ kiện...">
+                <button class="btn btn-link text-white ms-n5" type="submit">
+                    <i class="bi bi-search fs-5"></i>
+                </button>
+            </form>
+
+            <!-- Hotline + User/Cart -->
+            <div class="d-flex align-items-center">
+                <a href="tel:0377749999" class="btn btn-lg text-white rounded-pill px-4 me-4"
+                   style="background-color:#c7a062; font-weight:600;">
+                    <i class="bi bi-telephone-fill me-2"></i> Hotline: 0377749999
+                </a>
+
+                <a asp-controller="Cart" asp-action="Index" class="text-white me-4">
+                    <i class="bi bi-bag fs-4"></i>
+                </a>
+
+                @if (isLoggedIn)
+                {
+                    <div class="dropdown">
+                        <a class="text-white dropdown-toggle text-decoration-none" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-4 me-1"></i> @userEmail
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" asp-controller="Auth" asp-action="DangXuat">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                }
+                else
+                {
+                    <a asp-controller="Auth" asp-action="DangNhap" class="text-white">
+                        <i class="bi bi-person fs-4"></i>
+                    </a>
+                }
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="bg-white border-top">
+            <div class="container d-flex align-items-center">
+                <!-- Categories Dropdown -->
+                <div class="dropdown position-static">
+                    <a href="#" class="btn btn-lg text-white fw-bold me-5 dropdown-toggle"
+                       style="background-color:#ff8c00;" id="danhmucMenu"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-list"></i> Danh mục phụ kiện
+                    </a>
+
+                    <ul class="dropdown-menu shadow mt-0 p-3" aria-labelledby="danhmucMenu">
+                        <div class="d-flex">
+                            <div class="me-4">
+                                <h6 class="fw-bold">Ví & Thắt Lưng</h6>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="1" class="nav-link text-dark me-4">Ví Nam/Nữ</a>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="7" class="nav-link text-dark me-4">Thắt Lưng</a>
+                            </div>
+                            <div class="me-4">
+                                <h6 class="fw-bold">Túi Xách & Balo</h6>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="4" class="nav-link text-dark me-4">Ba Lô</a>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="6" class="nav-link text-dark me-4">Túi Đeo</a>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="3" class="nav-link text-dark me-4">Cặp Da</a>
+                            </div>
+                            <div class="me-4">
+                                <h6 class="fw-bold">Du Lịch & Công Sở</h6>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="2" class="nav-link text-dark me-4">Va Li</a>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="5" class="nav-link text-dark me-4">Gối Tựa</a>
+                            </div>
+                            <div class="me-4">
+                                <h6 class="fw-bold">Giày Dép & Thời Trang</h6>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="8" class="nav-link text-dark me-4">Giày Dép</a>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="9" class="nav-link text-dark me-4">Phụ Kiện Thời Trang</a>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold">Trang Sức & Đồng Hồ</h6>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="10" class="nav-link text-dark me-4">Đồng Hồ</a>
+                                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="11" class="nav-link text-dark me-4">Trang Sức</a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <!-- Menu Links -->
+                <a asp-controller="Home" asp-action="Index" asp-fragment="flash-sale" class="btn btn-lg text-dark me-4" style="background-color: #fff9c4;">
+                    <i class="bi bi-ticket-perforated"></i> Khuyến mãi
+                </a>
+
+                <a asp-controller="Home" asp-action="Index" asp-fragment="services" class="btn btn-lg text-dark me-4" style="background-color: #fff9c4;">
+                    <i class="bi bi-shield"></i> Dịch vụ
+                </a>
+
+                <a asp-controller="Home" asp-action="Index" asp-fragment="footer" class="btn btn-lg text-dark me-4" style="background-color: #fff9c4;">
+                    <i class="bi bi-telephone"></i> Liên hệ
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== SLIDER SECTION ========== -->
+    <div id="banner" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/slider_1.jpg" class="d-block w-100" alt="Phụ kiện thời trang">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- ========== CATEGORIES SECTION ========== -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="categories d-flex justify-content-center align-items-center mt-4">
+                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="1" class="nav-link text-dark me-4">
+                    <div class="category-item text-center">
+                        <img src="assets/icon/cate_1.webp.jpg" alt="Ví" class="img-fluid" style="width: 90px; height: 90px;">
+                        <p class="fs-5 fw-bold mt-2">Ví</p>
+                    </div>
+                </a>
+                <div class="divider"></div>
+
+                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="2" class="nav-link text-dark me-4">
+                    <div class="category-item text-center">
+                        <img src="assets/icon/cate_2.webp.jpg" alt="Va li" class="img-fluid" style="width: 90px; height: 90px;">
+                        <p class="fs-5 fw-bold mt-2">Va li</p>
+                    </div>
+                </a>
+                <div class="divider"></div>
+
+                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="4" class="nav-link text-dark me-4">
+                    <div class="category-item text-center">
+                        <img src="assets/icon/cate_3.webp.jpg" alt="Balo" class="img-fluid" style="width: 90px; height: 90px;">
+                        <p class="fs-5 fw-bold mt-2">Balo</p>
+                    </div>
+                </a>
+                <div class="divider"></div>
+
+                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="8" class="nav-link text-dark me-4">
+                    <div class="category-item text-center">
+                        <img src="assets/icon/cate_4.webp.jpg" alt="Giày dép" class="img-fluid" style="width: 90px; height: 90px;">
+                        <p class="fs-5 fw-bold mt-2">Giày dép</p>
+                    </div>
+                </a>
+                <div class="divider"></div>
+
+                <a asp-controller="SanPham" asp-action="Index" asp-route-danhmuc="10" class="nav-link text-dark me-4">
+                    <div class="category-item text-center">
+                        <img src="assets/icon/cate_5.webp.jpg" alt="Đồng hồ" class="img-fluid" style="width: 90px; height: 90px;">
+                        <p class="fs-5 fw-bold mt-2">Đồng hồ</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FLASH SALE SECTION ========== -->
+    <section class="flash-sale py-5" id="flash-sale">
+        <div class="container">
+            <!-- Title + Countdown -->
+            <div class="text-center mb-4" style="color: #8B0000;">
+                <h2 class="fw-bold d-flex justify-content-center align-items-center gap-2">
+                    FLASH <i class="bi bi-lightning-fill"></i> SALE
+                </h2>
+                <div id="countdown" class="d-flex justify-content-center gap-2 mt-2">
+                    <div class="time-box"><b>12</b><span>Weeks</span></div>
+                    <div class="time-box"><b>18</b><span>Hours</span></div>
+                    <div class="time-box"><b>46</b><span>Min</span></div>
+                    <div class="time-box"><b>02</b><span>Sec</span></div>
+                </div>
+            </div>
+
+            <!-- Carousel -->
+            <div class="carousel p-3">
+                <div id="flashSaleCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <!-- Product 1 -->
+                                <div class="col-md-3">
+                                    <div class="card text-center">
+                                        <img src="assets/icon/cate_6.webp.jpg" class="card-img-top" alt="Ví da nam cao cấp">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Ví da nam cao cấp</h6>
+                                            <p class="text-danger fw-bold">450.000₫</p>
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="1" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 2 -->
+                                <div class="col-md-3">
+                                    <div class="card text-center">
+                                        <img src="assets/icon/cate_7.webp.jpg" class="card-img-top" alt="Va li du lịch">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Va li du lịch 20 inch</h6>
+                                            <p class="text-danger fw-bold">1.200.000₫</p>
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="4" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 3 -->
+                                <div class="col-md-3">
+                                    <div class="card text-center">
+                                        <img src="assets/icon/cate_8.webp.jpg" class="card-img-top" alt="Balo laptop">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Balo laptop chống sốc</h6>
+                                            <p class="text-danger fw-bold">550.000₫</p>
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="3" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 4 -->
+                                <div class="col-md-3">
+                                    <div class="card text-center">
+                                        <img src="assets/icon/cate_9.webp.jpg" class="card-img-top" alt="Giày da nam">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Giày da nam công sở</h6>
+                                            <p class="text-danger fw-bold">850.000₫</p>
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="11" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <!-- Product 1 -->
+                                <div class="col-md-3">
+                                    <div class="card text-center">
+                                        <img src="assets/icon/cate_10.webp.jpg" class="card-img-top" alt="Thắt lưng da">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Thắt lưng da nam cao cấp</h6>
+                                            <p class="text-danger fw-bold">280.000₫</p>
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="10" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 2 -->
+                                <div class="col-md-3">
+                                    <div class="card text-center">
+                                        <img src="assets/icon/cate_11.webp.jpg" class="card-img-top" alt="Kính mát">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Kính mát thời trang</h6>
+                                            <p class="text-danger fw-bold">180.000₫</p>
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="13" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 3 -->
+                                <div class="col-md-3">
+                                    <div class="card text-center">
+                                        <img src="assets/icon/cate_12.webp.jpg" class="card-img-top" alt="Đồng hồ nam">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Đồng hồ đeo tay nam</h6>
+                                            <p class="text-danger fw-bold">1.250.000₫</p>
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="15" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 4 -->
+                                <div class="col-md-3">
+                                    <div class="card text-center">
+                                        <img src="assets/icon/cate_13.webp.jpg" class="card-img-top" alt="Vòng tay da">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Vòng tay da cá sấu</h6>
+                                            <p class="text-danger fw-bold">150.000₫</p>
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="16" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#flashSaleCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#flashSaleCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED PRODUCTS SECTION ========== -->
+    <section class="featured-products py-5">
+        <div class="container">
+            <!-- Title -->
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-dark d-flex justify-content-center align-items-center gap-2">SẢN PHẨM NỔI BẬT</h2>
+                <img src="assets/icon/iconmyabay.png" alt="Paper Plane" style="height:80px;">
+            </div>
+
+            <!-- Carousel -->
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <!-- Product 1 -->
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <img src="assets/icon/cate_18.webp.jpg" class="card-img-top" alt="Ví da nam cao cấp">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Ví da nam cao cấp</h6>
+                                        <p class="text-danger fw-bold">450.000₫</p>
+                                        @if (isLoggedIn)
+                                        {
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="21" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <img src="assets/icon/cate_10.webp.jpg" class="card-img-top" alt="Thắt lưng da thật">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Thắt lưng da thật</h6>
+                                        <p class="text-danger fw-bold">380.000₫</p>
+                                        @if (isLoggedIn)
+                                        {
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="22" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <img src="assets/icon/cate_11.webp.jpg" class="card-img-top" alt="Kính mát thời trang">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Kính mát thời trang</h6>
+                                        <p class="text-danger fw-bold">250.000₫</p>
+                                        @if (isLoggedIn)
+                                        {
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="23" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <img src="assets/icon/cate_12.webp.jpg" class="card-img-top" alt="Đồng hồ đeo tay nam">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Đồng hồ đeo tay nam</h6>
+                                        <p class="text-danger fw-bold">1.200.000₫</p>
+                                        @if (isLoggedIn)
+                                        {
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="24" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Product 1 -->
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <img src="assets/icon/cate_19.webp.jpg" class="card-img-top" alt="Vòng tay phong thủy">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Vòng tay phong thủy</h6>
+                                        <p class="text-danger fw-bold">180.000₫</p>
+                                        @if (isLoggedIn)
+                                        {
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="25" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <img src="assets/icon/cate_20.webp.jpg" class="card-img-top" alt="Nhẫn bạc nam tính">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Nhẫn bạc nam tính</h6>
+                                        <p class="text-danger fw-bold">320.000₫</p>
+                                        @if (isLoggedIn)
+                                        {
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="26" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <img src="assets/icon/cate_21.webp.jpg" class="card-img-top" alt="Cà vạt lụa cao cấp">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Cà vạt lụa cao cấp</h6>
+                                        <p class="text-danger fw-bold">290.000₫</p>
+                                        @if (isLoggedIn)
+                                        {
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="27" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <img src="assets/icon/cate_22.webp.jpg" class="card-img-top" alt="Móc khóa da cá tính">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Móc khóa da cá tính</h6>
+                                        <p class="text-danger fw-bold">75.000₫</p>
+                                        @if (isLoggedIn)
+                                        {
+                                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="28" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ACCESSORIES FOR YOU SECTION ========== -->
+    <section class="for-you py-5">
+        <div class="container">
+            <!-- Title -->
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-dark">PHỤ KIỆN CHO BẠN</h2>
+                <img src="assets/icon/iconmyabay.png" alt="Paper Plane" style="height:80px;">
+            </div>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills justify-content-center mb-4" id="forYouTabs">
+                <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-tui">Túi Xách</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-giay">Giày Dép</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-trang-suc">Trang Sức</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-phu-kien">Phụ Kiện Khác</button></li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Bags Tab -->
+                <div class="tab-pane fade show active" id="tab-tui">
+                    <div class="row">
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_24.webp.jpg" class="card-img-top" alt="Túi đeo chéo da"><div class="card-body"><h6 class="card-title">Túi đeo chéo da</h6><p class="text-danger fw-bold">320.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="31" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_31.webp.jpg" class="card-img-top" alt="Balo thời trang"><div class="card-body"><h6 class="card-title">Balo thời trang</h6><p class="text-danger fw-bold">450.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="32" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_18.webp.jpg" class="card-img-top" alt="Ví da nam cao cấp"><div class="card-body"><h6 class="card-title">Ví da nam cao cấp</h6><p class="text-danger fw-bold">280.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="33" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_30.webp.jpg" class="card-img-top" alt="Túi đựng laptop"><div class="card-body"><h6 class="card-title">Túi đựng laptop</h6><p class="text-danger fw-bold">380.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="34" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                    </div>
+                </div>
+
+                <!-- Shoes Tab -->
+                <div class="tab-pane fade" id="tab-giay">
+                    <div class="row">
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_29.webp.jpg" class="card-img-top" alt="Giày thể thao nam"><div class="card-body"><h6 class="card-title">Giày thể thao nam</h6><p class="text-danger fw-bold">420.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="35" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_28.webp.jpg" class="card-img-top" alt="Dép đi trong nhà"><div class="card-body"><h6 class="card-title">Dép đi trong nhà</h6><p class="text-danger fw-bold">85.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="36" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_27.webp.jpg" class="card-img-top" alt="Sandal nữ"><div class="card-body"><h6 class="card-title">Sandal nữ thời trang</h6><p class="text-danger fw-bold">190.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="37" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_9.webp.jpg" class="card-img-top" alt="Giày da công sở"><div class="card-body"><h6 class="card-title">Giày da công sở</h6><p class="text-danger fw-bold">550.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="38" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                    </div>
+                </div>
+
+                <!-- Jewelry Tab -->
+                <div class="tab-pane fade" id="tab-trang-suc">
+                    <div class="row">
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_17.webp.jpg" class="card-img-top" alt="Dây chuyền bạc"><div class="card-body"><h6 class="card-title">Dây chuyền bạc sang trọng</h6><p class="text-danger fw-bold">280.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="39" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_20.webp.jpg" class="card-img-top" alt="Nhẫn bạc nam tính"><div class="card-body"><h6 class="card-title">Nhẫn bạc nam tính</h6><p class="text-danger fw-bold">320.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="40" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_19.webp.jpg" class="card-img-top" alt="Vòng tay phong thủy"><div class="card-body"><h6 class="card-title">Vòng tay phong thủy</h6><p class="text-danger fw-bold">180.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="41" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_26.webp.jpg" class="card-img-top" alt="Bông tai nữ"><div class="card-body"><h6 class="card-title">Bông tai nữ thời trang</h6><p class="text-danger fw-bold">150.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="42" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                    </div>
+                </div>
+
+                <!-- Other Accessories Tab -->
+                <div class="tab-pane fade" id="tab-phu-kien">
+                    <div class="row">
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_11.webp.jpg" class="card-img-top" alt="Kính mát thời trang"><div class="card-body"><h6 class="card-title">Kính mát thời trang</h6><p class="text-danger fw-bold">250.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="43" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_25.webp.jpg" class="card-img-top" alt="Thắt lưng da"><div class="card-body"><h6 class="card-title">Thắt lưng da thật</h6><p class="text-danger fw-bold">380.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="44" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_22.webp.jpg" class="card-img-top" alt="Móc khóa da"><div class="card-body"><h6 class="card-title">Móc khóa da cá tính</h6><p class="text-danger fw-bold">75.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="45" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                        <div class="col-md-3"><div class="card text-center"><img src="assets/icon/cate_21.webp.jpg" class="card-img-top" alt="Cà vạt lụa"><div class="card-body"><h6 class="card-title">Cà vạt lụa cao cấp</h6><p class="text-danger fw-bold">290.000₫</p>@if (isLoggedIn)
+                                    {
+                                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-maSp="46" class="btn btn-danger btn-sm">Thêm vào giỏ</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Auth" asp-action="DangNhap" asp-route-returnUrl="@returnUrl" class="btn btn-secondary btn-sm">Đăng nhập để mua</a>
+                                    }</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="services py-5 position-relative" id="services">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <!-- Services List -->
+            <div class="services-list col-md-6">
+                <h3 class="fw-bold mb-4">DỊCH VỤ CỦA CHÚNG TÔI</h3>
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        <i class="bi bi-truck text-danger me-2"></i>
+                        <strong>GIAO HÀNG MIỄN PHÍ</strong>
+                        <p class="text-muted small mb-0">Giao hàng free nội thành HN và HCM</p>
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-arrow-repeat text-danger me-2"></i>
+                        <strong>ĐỔI TRẢ DỄ DÀNG</strong>
+                        <p class="text-muted small mb-0">Đổi trả trong vòng 7 ngày nếu không hài lòng</p>
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-gem text-danger me-2"></i>
+                        <strong>BẢO HÀNH CHẤT LƯỢNG</strong>
+                        <p class="text-muted small mb-0">Bảo hành 12 tháng cho tất cả sản phẩm</p>
+                    </li>
+                    <li>
+                        <i class="bi bi-star text-danger me-2"></i>
+                        <strong>TƯ VẤN CHUYÊN NGHIỆP</strong>
+                        <p class="text-muted small mb-0">Đội ngũ tư vấn nhiệt tình, chuyên nghiệp</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Services Image -->
+            <div class="services-img col-md-5 text-center">
+                <img src="assets/img/thinh.png" alt="Phụ kiện thời trang" class="img-fluid" style="max-height:320px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NEWSLETTER SECTION ========== -->
+    <section class="newsletter text-center text-white">
+        <div class="container py-4">
+            <h5 class="fw-bold">Đăng ký để nhận ưu đãi đặc biệt</h5>
+            <p class="small">Cập nhật xu hướng thời trang mới nhất và các chương trình khuyến mãi đặc biệt</p>
+            <div class="d-flex justify-content-center mt-3">
+                @if (!isLoggedIn)
+                {
+                    <a asp-controller="Auth" asp-action="DangKi" class="btn btn-warning rounded-pill px-4 fw-bold text-white">ĐĂNG KÝ NGAY</a>
+                }
+                else
+                {
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-light rounded-pill px-4 fw-bold">Khám phá thêm</a>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER SECTION ========== -->
+    <section id="footer">
+        <footer class="text-white" style="background-color: #8B0000;">
+            <div class="container py-5 d-flex flex-wrap justify-content-between">
+                <!-- Logo & Contact -->
+                <div class="mb-4">
+                    <h4 class="fw-bold">Phụ Kiện TDA</h4>
+                    <p>Phong cách - Đẳng cấp - Khác biệt</p>
+                    <p><i class="bi bi-geo-alt"></i> Trụ sở: Thủ Đô Hà Nội</p>
+                    <p><i class="bi bi-telephone"></i> 0377749999</p>
+                    <p><i class="bi bi-envelope"></i> Congacon@gmail.com</p>
+                </div>
+
+                <!-- Links -->
+                <div class="mb-4">
+                    <h6 class="fw-bold">TÌM HIỂU THÊM</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Trang chủ</a></li>
+                        <li><a href="#" class="text-white">Bộ sưu tập</a></li>
+                        <li><a href="#" class="text-white">Xu hướng</a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <h6 class="fw-bold">HỖ TRỢ KHÁCH HÀNG</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Chính sách bảo hành</a></li>
+                        <li><a href="#" class="text-white">Hướng dẫn chọn size</a></li>
+                        <li><a href="#" class="text-white">Chăm sóc sản phẩm</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Payment -->
+                <div>
+                    <h6 class="fw-bold">THEO DÕI CHÚNG TÔI</h6>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="https://www.facebook.com/khanhnguyen1301" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/d.khanh_1301/" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="https://x.com/i/status/1963981909488198043" class="text-white"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                    <h6 class="fw-bold mt-3">PHƯƠNG THỨC THANH TOÁN</h6>
+                    <div class="payment-box d-inline-block px-3 py-2" style="background-color: #fff;">
+                        <img src="https://taphoa01.vinastar.info/wp-content/uploads/2023/05/logo_acb.png" alt="ACB" style="height:25px; margin-right:10px;">
+                        <img src="https://taphoa01.vinastar.info/wp-content/uploads/2023/05/logo_msb.png" alt="MSB" style="height:25px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center py-3" style="background-color: #600000; color: #fff;">
+                © 2027 Phụ Kiện Store - Làm Vì Đam Mê | Phong Cách Tạo Nên Đẳng Cấp
+            </div>
+        </footer>
+    </section>

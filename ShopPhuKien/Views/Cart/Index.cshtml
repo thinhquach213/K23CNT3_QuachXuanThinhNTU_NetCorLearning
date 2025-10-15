@@ -1,0 +1,96 @@
+﻿@model List<CartItem>
+@{
+    ViewData["Title"] = "Giỏ hàng";
+    decimal tongTien = Model.Sum(x => x.Gia * x.SoLuong);
+}
+
+<div class="container my-4">
+    <h2 class="mb-4 text-center">🛒 Giỏ hàng của bạn</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            Giỏ hàng trống. <a href="/SanPham/Index">Mua sắm ngay</a>!
+        </div>
+    }
+    else
+    {
+        <table class="table table-bordered align-middle text-center">
+            <thead class="table-secondary">
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr id="row-@item.MaSp" class="cart-item">
+                        <td>@item.TenSp</td>
+                        <td>@item.Gia.ToString("N0") ₫</td>
+                        <td>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <button class="btn btn-outline-secondary btn-sm" onclick="decreaseQuantity(@item.MaSp)">–</button>
+                                <input type="text" id="quantity-@item.MaSp" class="form-control text-center mx-2"
+                                       value="@item.SoLuong" readonly style="width: 50px;" />
+                                <button class="btn btn-outline-secondary btn-sm" onclick="increaseQuantity(@item.MaSp)">+</button>
+                            </div>
+                        </td>
+                        <td class="text-danger fw-bold thanh-tien">@((item.Gia * item.SoLuong).ToString("N0")) ₫</td>
+                        <td>
+                            <a href="/Cart/Remove?maSp=@item.MaSp" class="btn btn-danger btn-sm">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-end fw-bold">Tổng cộng:</td>
+                    <td id="tong-tien" class="text-danger fw-bold">@tongTien.ToString("N0") ₫</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <form asp-action="DatHang" method="post" class="text-end">
+            <button type="submit" class="btn btn-success px-4">Đặt hàng</button>
+        </form>
+    }
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function increaseQuantity(maSp) {
+        let input = document.getElementById('quantity-' + maSp);
+        let newQty = parseInt(input.value) + 1;
+        input.value = newQty;
+        updateQuantity(maSp, newQty);
+    }
+
+    function decreaseQuantity(maSp) {
+        let input = document.getElementById('quantity-' + maSp);
+        let newQty = parseInt(input.value) - 1;
+        if (newQty < 1) newQty = 1;
+        input.value = newQty;
+        updateQuantity(maSp, newQty);
+    }
+
+    function updateQuantity(maSp, soLuong) {
+        $.ajax({
+            url: '/Cart/UpdateQuantity',
+            type: 'POST',
+            data: { maSp: maSp, soLuong: soLuong },
+            success: function (res) {
+                if (res.success) {
+                    // cập nhật giá từng dòng
+                    $('#row-' + maSp + ' .thanh-tien').text(res.thanhTien + ' ₫');
+                    // cập nhật tổng tiền
+                    $('#tong-tien').text(res.tongTien + ' ₫');
+                }
+            }
+        });
+    }
+</script>
